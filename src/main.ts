@@ -4,14 +4,11 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  // Habilita validaciones con class-validator
   app.useGlobalPipes(new ValidationPipe());
-
-  // Habilita CORS si necesitás acceder desde otro dominio
   app.enableCors();
 
-  await app.listen(process.env.PORT ?? 3000);
-  await app.listen(port, '0.0.0.0');
+  const port = Number(process.env.PORT) || 3000;
+  await app.listen(port, '0.0.0.0'); // <- clave para que responda fuera del contenedor
 }
 bootstrap();
+
