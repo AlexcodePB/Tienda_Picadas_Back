@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1748992809223",
+    "name": "Nestor Bustos",
+    "email": "nestor@trikom.com",
+    "password": "12345678",
+    "role": "admin",
+    "isActive": true,
+    "createdAt": "2025-08-05T22:22:45.000Z",
+    "updatedAt": "2025-08-05T22:22:45.000Z"
+  },
+  {
+    "id": "1748992843728",
+    "name": "Nestor Bustos",
+    "email": "nestor@trikom.com",
+    "password": "12345678",
+    "role": "admin",
+    "isActive": true,
+    "createdAt": "2025-08-05T22:22:45.000Z",
+    "updatedAt": "2025-08-05T22:22:45.000Z"
+  },
+  {
+    "id": "1748992809223",
+    "name": "Alexis Perez Beltran",
+    "email": "ale@trikom.com",
+    "password": "12345678",
+    "role": "admin",
+    "isActive": true,
+    "createdAt": "2025-08-05T22:22:45.000Z",
+    "updatedAt": "2025-08-05T22:22:45.000Z"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Picada Premium de Quesos y Fiambres 'Tapiz del Destino'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado- Queso Gruyere - Queso Holanda - Queso Brie -Jamon crudo - Jamon cocido natural - Lomito finas hierbas - Salame con especias -Longaniza - Chorizo colorado - Nueces - Almendras - Aceitunas rellenas - Cherry.",
+    "image": "assets/picadas/para web/tablas/picada 3 sin tapa.jpg",
+    "hoverImage": "assets/logo/logos y simbolos redes/Símbolo mostaza (Tapiz del destino).png",
+    "image2": "assets/picadas/para web/tablas/picada 3 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+  {
+    "id": 2,
+    "name": "Picada Artesanal en Pan de Campo 'Vikinga'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado - Queso Holanda - Queso Fontina - Queso Roquefort - Jamon crudo - Bondiola - Lomito finas hierbas - Cantimpalo - Longaniza - Leber - Mini brochettes Aceitunas rellenas, Albahaca y Cherry.",
+    "image": "assets/picadas/para web/tablas/pan de campo frente.jpg",
+    "hoverImage": "assets/picadas/para web/tablas/pan de campo sin tapa.jpg",
+    "image2": "assets/picadas/para web/tablas/pan de campo sin tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04145.jpg",
+    "image4": "assets/picadas/eventos/combo2 - picada4.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+
+  {
+    "id": 3,
+    "name": "Picada Premium de Quesos 'Triangulo de Odin'",
+    "price": 25000,
+    "ingredients": "Queso Saborizado - Queso Reggianito - Queso Brie - Queso Roquefort - Queso Gruyere - Boconccinos - Nueces - Almendras - Aceitunas rellenas - Cherry- Albahaca fresca.",
+    "image": "assets/picadas/para web/tablas/picada 1 sin tapas.jpg",
+    "hoverImage": "assets/logo/logos y simbolos redes/Símbolo rojo (El nudo de Odin).png",
+    "image2": "assets/picadas/para web/tablas/picada 1 con tapas.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+
+  {
+    "id": 4,
+    "name": "Picada Premium de Fiambres 'Inguz'",
+    "price": 25000,
+    "ingredients": "Jamon crudo - Bondiola - Jamon cocido natural - Lomito finas hierbas - Salame con especias - Longaniza - Leber - Nueces - Almendras - Aceitunas rellenas - Cherry - Bastones de Apio.",
+    "image": "assets/picadas/para web/tablas/picada 2 sin tapa.jpg",
+    "hoverImage": "assets/logo/logos y simbolos redes/Símbolo verde (Inguz).png",
+    "image2": "assets/picadas/para web/tablas/picada 2 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+
+  {
+    "id": 5,
+    "name": "Picada Premium Vegetariana 'Runa del Amor'",
+    "price": 25000,
+    "ingredients": "Queso Fontina - Boconccinos - Queso Saborizado - Queso Holanda - Queso Brie - Bastones de Zanahoria - Bastones de Apio - Mini brochettes de Cherry, Aceituna y Albahaca - Nueces - Almendras.",
+    "image": "assets/picadas/para web/tablas/picada 4 sin tapa.jpg",
+    "hoverImage": "assets/logo/logos y simbolos redes/Símbolo beige (Talisman del amor).png",
+    "image2": "assets/picadas/para web/tablas/picada 4 con tapa.jpg",
+    "image3": "assets/picadas/fotos redes/DSC04141.jpg",
+    "image4": "assets/picadas/eventos/picadas.jpg",
+    "image5": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+
+  {
+    "id": 6,
+    "name": "Sanguchitos Artesanales Varios Sabores (x 12 unid.)",
+    "price": 25000,
+    "ingredients": "• Lomito finas hierbas - Queso - Ciboulette y queso crema. • Jamon crudo - Rucula - Queso - Alioli. • Queso crema y Roquefort - Apio - Nuez - Queso. • Albahaca - Cherry - Queso - Alioli. • Berenjena al escabeche. • Morron agridulce. • Pollo al escabeche. Con figacitas de manteca con semillas de sésamo y amapola.",
+    "image": "assets/picadas/cajas fondo blanco/sanguchitos dentro de caja.jpg",
+    "hoverImage": "assets/picadas/cajas fondo blanco/caja perfil cerrada.jpg",
+    "image2": "assets/picadas/combos/combo1 - sanguchitos/20201007_190927.jpg",
+    "image3": "assets/picadas/cajas fondo blanco/caja perfil cerrada.jpg",
+    "image4": "assets/picadas/combos/combo1 - sanguchitos/20201007_185212.jpg",
+    "url": "picadas-y-sanguchitos.html",
+    "category": "A"
+  },
+
+  {
+    "id": 7,
+    "name": "Conserva de pollo al escabeche",
+    "price": 15000,
+    "image": "assets/picadas/para web/conservas/DSC04017.jpg",
+    "url": "conservas.html",
+    "category": "B"
+  },
+
+  {
+    "id": 8,
+    "name": "Conserva de morrones agridulces",
+    "price": 15000,
+    "image": "assets/picadas/para web/conservas/DSC04018.jpg",
+    "url": "conservas.html",
+    "category": "B"
+  },
+
+  {
+    "id": 9,
+    "name": "Conserva de berenjenas al escabeche",
+    "price": 10000,
+    "image": "assets/picadas/para web/conservas/DSC04022.jpg",
+    "url": "conservas.html",
+    "category": "B"
+  },
+
+  {
+    "id": 10,
+    "name": "Conserva de pepinos agridulces",
+    "price": 12000,
+    "image": "assets/picadas/para web/conservas/DSC04023.jpg",
+    "url": "conservas.html",
+    "category": "B"
+  },
+
+  {
+    "id": 11,
+    "name": "Combo 1 - Sanguchitos Artesanales",
+    "price": 25000,
+    "ingredients": "• Lomito finas hierbas - Queso - Ciboulette y queso crema• Jamon crudo - Rucula - Queso - Alioli. • Queso crema y Roquefort - Apio - Nuez - Queso. • Albahaca - Cherry - Queso - Alioli. • Berenjena al escabeche. • Morron agridulce. • Pollo al escabeche. Con figacitas de manteca con semillas.",
+    "image": "assets/picadas/eventos/combo1 - sang + conser1.jpg",
+    "hoverImage": "assets/picadas/eventos/combo1 - sang + conser3.jpg",
+    "image2": "assets/picadas/eventos/combo1 - sang + conser3.jpg",
+    "image3": "assets/picadas/eventos/combo1 - sang + conser2.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  },
+
+  {
+    "id": 12,
+    "name": "Combo 2 - Picada Premium Gourmet.jpg",
+    "price": 25000,
+    "ingredients": "Picada en Pan de Campo 'Vikinga' (Comen 2 pican 3) - Dips - 2 Cervezas (Stella o Andes)",
+    "image": "assets/picadas/eventos/combo2 - picada2.jpg",
+    "hoverImage": "assets/picadas/eventos/combo2 - picada3.jpg",
+    "image2": "assets/picadas/eventos/combo2 - picada3.jpg",
+    "image3": "assets/picadas/eventos/combo2 - picada4.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  },
+
+  {
+    "id": 13,
+    "name": "Tabla Artesanal de Carne y Arrollado de pollo",
+    "price": 25000,
+    "ingredients": "Carne Cuadrada cocida en caldo de verduras. Arrollado de pollo a las Finas Hierbas relleno de Morron asado, Jamon natural, Queso Dambo y Zanahoria. Incluye: 1 (una) docena y media de Figacitas de manteca con semillas de sesamo y amapola, Salsa Alioli, Dip de zanahoria y ajo, Nueces, Almendras, Pasas de uva, Cherry, Albahaca. 1 (un) Vino Portillo Malbec x 750 ml o 2 (dos) latas de Cerveza (Stella Artois, Andes o Patagonia 24.7) x 473 cc.(COMEN 5)",
+    "image": "assets/picadas/eventos/tabla carne + arrolla 2.jpg",
+    "hoverImage": "assets/picadas/eventos/tabla carne + arrolla 1.jpg",
+    "image2": "assets/picadas/eventos/tabla carne + arrolla 1.jpg",
+    "image3": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  },
+
+  {
+    "id": 14,
+    "name": "Tabla Artesanal de Carré de Cerdo y Suprema Grillada",
+    "price": 25000,
+    "ingredients": "Carré de cerdo a las Finas Hierbas Suprema de Pollo grillada. Incluye: 1 (una) docena y media de Figacitas de manteca con semillas de sesamo y amapola, Salsa Alioli, Dip de Roquefort y Queso crema, Nueces, Almendras, Pasas de uva, Cerezas, Ciboulette. 1 (un) Vino Portillo Malbec x 750 ml o 2 (dos) latas de Cerveza (Stella Artois, Andes o Patagonia 24.7) x 473 cc.(COMEN 5)",
+    "image": "assets/picadas/eventos/tabla carre cerdo + suprema 1.jpg",
+    "hoverImage": "assets/picadas/eventos/tabla carre cerdo + suprema 2.jpg",
+    "image2": "assets/picadas/eventos/tabla carre cerdo + suprema 2.jpg",
+    "image3": "assets/picadas/eventos/combo2 - picada5.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  },
+
+  {
+    "id": 15,
+    "name": "Box 1 - Conservas",
+    "price": 25000,
+    "ingredients": "2(dos) Conservas a eleccion (Berenjenas al escabeche, Morrones agridulces, Pollo al escabeche, Pepinos agridulces). Incluye: Tostadas - 1 (un) Chandon 187",
+    "image": "assets/picadas/eventos/box1 - cons1.jpg",
+    "hoverImage": "assets/picadas/eventos/box1 - cons2.jpg",
+    "image2": "assets/picadas/eventos/box1 - cons2.jpg",
+    "image3": "assets/picadas/eventos/box.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  },
+
+  {
+    "id": 16,
+    "name": "Box 2 - Sanguchitos y Conserva",
+    "price": 25000,
+    "ingredients": "6 (seis) Sanguchitos Artesanales. • Lomito finas hierbas - Queso - Ciboulette y queso crema. •Jamon crudo - Rucula - Queso - Alioli. • Queso crema y Roquefort - Apio - Nuez - Queso. • Albahaca - Cherry - Queso - Alioli. • Berenjena al escabeche. • Morron agridulce. • Pollo al escabeche. Con figacitas de manteca con semillas de sesamo y amapola. Incluye: 1 (una) Conserva a eleccion (Berenjenas al escabeche, Morrones agridulces, Pollo al escabeche, Pepinos agridulces) - 1 (un) Chandon 187.",
+    "image": "assets/picadas/eventos/box2 - sang y cons1.jpg",
+    "hoverImage": "assets/picadas/eventos/box2 - sang y cons2.jpg",
+    "image2": "assets/picadas/eventos/box2 - sang y cons2.jpg",
+    "image3": "assets/picadas/eventos/box.jpg",
+    "url": "eventos-regalos.html",
+    "category": "C"
+  }
+]
