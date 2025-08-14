@@ -1,252 +1,238 @@
-# 🥓 Picadas Backend - Plan de Desarrollo
+# 🥓 Picadas Backend API
 
-## 📖 Descripción del Proyecto
+API REST para e-commerce de picadas desarrollada con NestJS, Prisma y MySQL.
 
-API backend para un e-commerce de picadas desarrollado con NestJS, Prisma y MySQL. Incluye gestión de productos, usuarios, autenticación y sistema de pagos con Ualá.
+## 🚀 Instalación y Configuración
 
-## 🏗️ Arquitectura Técnica
+### Prerrequisitos
+- **Node.js** >= 18
+- **MySQL** >= 8.0
+- **npm** o **yarn**
 
-- **Framework**: NestJS (Node.js)
-- **Base de Datos**: MySQL con Prisma ORM
-- **Autenticación**: bcryptjs (preparado para JWT)
-- **Pagos**: Integración con API de Ualá
-- **Validaciones**: class-validator + class-transformer
-
-## 🚀 Quick Start
-
+### 1. Clonar el repositorio
 ```bash
-# Instalación
+git clone https://github.com/AlexcodePB/Tienda_Picadas_Back.git
+cd Tienda_Picadas_Back
+```
+
+### 2. Instalar dependencias
+```bash
 npm install
-
-# Variables de entorno
-cp .env.example .env
-
-# Base de datos
-npx prisma migrate dev
-npx prisma db seed
-
-# Desarrollo
-npm run start:dev
 ```
 
-## 📋 Plan de Desarrollo por Fases
+### 3. Configurar variables de entorno
+Crear archivo `.env` en la raíz del proyecto:
 
-### 🔴 **FASE 1: Correcciones Críticas** (Estimado: 1-2 días)
-
-#### Issues Críticos a Resolver
-- [ ] **Nomenclatura inconsistente**: Cambiar `ProductosService` → `ProductsService`
-- [ ] **Validaciones faltantes**: Agregar decoradores a `CreateUserDto`
-- [ ] **Tipos inseguros**: Remover `any` types en `products.service.ts:21`
-- [ ] **Código innecesario**: Eliminar método `servicex2`
-- [ ] **Schema inconsistente**: Sincronizar `CreateProductDto` con Prisma schema
-
-#### Comandos de Validación
-```bash
-npm run lint --fix     # Corregir errores de ESLint
-npm run build         # Verificar compilación TypeScript
-npm audit fix         # Corregir vulnerabilidades
-```
-
-### 🟡 **FASE 2: Funcionalidades Core** (Estimado: 3-5 días)
-
-#### Autenticación Completa
-- [ ] Implementar JWT tokens
-- [ ] Guards de autenticación
-- [ ] Roles y permisos (admin/user)
-- [ ] Refresh tokens
-- [ ] Password reset
-
-#### Gestión de Productos Avanzada
-- [ ] Filtros y búsqueda
-- [ ] Paginación
-- [ ] Categorías anidadas
-- [ ] Stock management
-- [ ] Imágenes múltiples con validación
-
-#### APIs Mejoradas
-```typescript
-// Ejemplo de endpoints a implementar
-GET    /products?category=&search=&page=&limit=
-GET    /products/:id/stock
-POST   /products/:id/reserve
-DELETE /products/:id/unreserve
-```
-
-### 🟠 **FASE 3: Testing & Calidad** (Estimado: 2-3 días)
-
-#### Testing Strategy
-- [ ] **Unit Tests**: Servicios individuales (>80% coverage)
-- [ ] **Integration Tests**: Controllers con base de datos
-- [ ] **E2E Tests**: Flujos completos de usuario
-- [ ] **Performance Tests**: Load testing con Artillery
-
-#### Estructura de Tests
-```
-src/
-├── products/
-│   ├── products.service.spec.ts
-│   ├── products.controller.spec.ts
-│   └── products.e2e-spec.ts
-├── auth/
-│   └── auth.service.spec.ts
-└── users/
-    └── users.service.spec.ts
-```
-
-### 🟢 **FASE 4: Seguridad & Producción** (Estimado: 2-3 días)
-
-#### Seguridad
-- [ ] **Rate Limiting**: Implementar con @nestjs/throttler
-- [ ] **Input Sanitization**: Validación robusta de datos
-- [ ] **CORS Configurado**: Configuración específica por ambiente
-- [ ] **Helmet**: Security headers
-- [ ] **Webhook Security**: Verificación de firmas Ualá
-
-#### Monitoring & Logging
-- [ ] **Structured Logging**: Winston + formato JSON
-- [ ] **Health Checks**: Endpoint `/health`
-- [ ] **Metrics**: Prometheus metrics
-- [ ] **Error Tracking**: Sentry integration
-
-### 🚀 **FASE 5: Features Avanzadas** (Estimado: 1-2 semanas)
-
-#### Carrito de Compras
-- [ ] Sesiones de carrito
-- [ ] Persistencia para usuarios logueados
-- [ ] Cálculo de totales con descuentos
-- [ ] Integración con stock
-
-#### Sistema de Órdenes
-- [ ] Gestión completa de órdenes
-- [ ] Estados de orden (pending, paid, shipped, delivered)
-- [ ] Tracking de órdenes
-- [ ] Notificaciones email
-
-#### Features de E-commerce
-- [ ] **Wishlist**: Lista de deseos
-- [ ] **Reviews**: Sistema de reseñas
-- [ ] **Recommendations**: Productos relacionados
-- [ ] **Inventory**: Control de stock avanzado
-- [ ] **Coupons**: Sistema de cupones de descuento
-
-## 🛠️ Configuración de Desarrollo
-
-### Variables de Entorno Necesarias
 ```env
-DATABASE_URL="mysql://user:password@localhost:3306/picadas_db"
-JWT_SECRET="tu-jwt-secret-super-seguro"
+# Database
+DATABASE_URL="mysql://usuario:password@localhost:3306/picadas_db"
+
+# Server
+PORT=3000
+NODE_ENV=development
+
+# Ualá Payment Integration
 UALA_AUTH_URL="https://api.uala.com.ar/auth"
 UALA_ORDER_URL="https://api.uala.com.ar/orders"
 USERNAME_UALA="tu-username"
 CLIENT_ID_UALA="tu-client-id"
 CLIENT_SECRET_UALA="tu-client-secret"
-PORT=3000
-NODE_ENV="development"
 ```
 
-### Scripts Disponibles
+### 4. Configurar base de datos
 ```bash
-npm run start:dev      # Desarrollo con hot reload
-npm run build         # Build para producción
-npm run start:prod    # Iniciar en producción
-npm run lint          # Linter ESLint
+# Ejecutar migraciones
+npx prisma migrate dev
+
+# Ejecutar seed (opcional)
+npx prisma db seed
+```
+
+### 5. Iniciar servidor
+```bash
+# Desarrollo
+npm run start:dev
+
+# Producción
+npm run build
+npm run start:prod
+```
+
+El servidor estará disponible en: `http://localhost:3000`
+
+## 📚 Documentación de API
+
+### 🛍️ Productos
+```
+GET    /productos           # Listar todos los productos
+GET    /productos/:id       # Obtener producto por ID
+POST   /productos           # Crear nuevo producto
+PUT    /productos/:id       # Actualizar producto
+DELETE /productos/:id       # Eliminar producto
+```
+
+**Ejemplo de producto:**
+```json
+{
+  "name": "Picada Clásica",
+  "price": 2500,
+  "ingredients": "Jamón, queso, salame, aceitunas",
+  "image": "https://ejemplo.com/imagen.jpg",
+  "url": "picada-clasica",
+  "category": "tradicional"
+}
+```
+
+### 👥 Usuarios
+```
+POST   /users               # Registrar nuevo usuario
+GET    /users               # Listar usuarios
+```
+
+**Ejemplo de usuario:**
+```json
+{
+  "name": "Juan Pérez",
+  "email": "juan@ejemplo.com",
+  "password": "123456"
+}
+```
+
+### 🔐 Autenticación
+```
+POST   /auth/login          # Iniciar sesión
+```
+
+**Login:**
+```json
+{
+  "email": "juan@ejemplo.com",
+  "password": "123456"
+}
+```
+
+### 💳 Pagos (Ualá)
+```
+POST   /payment/checkout    # Crear orden de pago
+POST   /payment/webhook     # Webhook de Ualá (interno)
+```
+
+**Crear pago:**
+```json
+{
+  "amount": 2500,
+  "email": "cliente@ejemplo.com",
+  "id": "orden-123",
+  "description": "Compra de picadas"
+}
+```
+
+## 🛠️ Scripts Disponibles
+
+```bash
+# Desarrollo
+npm run start:dev      # Servidor con hot reload
+npm run start:debug    # Servidor con debug
+
+# Build y Producción
+npm run build          # Compilar proyecto
+npm run start:prod     # Iniciar en producción
+
+# Testing
 npm run test          # Tests unitarios
 npm run test:e2e      # Tests end-to-end
 npm run test:cov      # Coverage de tests
+
+# Calidad de Código
+npm run lint          # ESLint
+npm run format        # Prettier
+
+# Base de Datos
+npx prisma migrate dev     # Aplicar migraciones
+npx prisma db seed        # Cargar datos de prueba
+npx prisma studio         # Abrir Prisma Studio
 ```
 
-## 📊 Endpoints API
+## 🏗️ Arquitectura
 
-### Productos
 ```
-GET    /productos           # Listar todos
-GET    /productos/:id       # Obtener por ID
-POST   /productos           # Crear producto (auth required)
-PUT    /productos/:id       # Actualizar (auth required)
-DELETE /productos/:id       # Eliminar (auth required)
-```
-
-### Usuarios & Auth
-```
-POST   /users               # Registro
-GET    /users               # Listar usuarios (admin only)
-POST   /auth/login          # Login
-POST   /auth/refresh        # Refresh token
-POST   /auth/logout         # Logout
+src/
+├── auth/           # Módulo de autenticación
+├── users/          # Gestión de usuarios
+├── products/       # Gestión de productos
+├── payment/        # Sistema de pagos Ualá
+├── prisma/         # Configuración Prisma
+└── main.ts         # Punto de entrada
 ```
 
-### Pagos
+## 🔧 Stack Tecnológico
+
+- **Framework**: NestJS
+- **Base de Datos**: MySQL + Prisma ORM
+- **Validación**: class-validator + class-transformer
+- **Autenticación**: bcryptjs (preparado para JWT)
+- **Pagos**: Integración con Ualá API
+- **Testing**: Jest + Supertest
+
+## 🚀 Deploy
+
+### Variables de Entorno para Producción
+```env
+NODE_ENV=production
+PORT=3000
+DATABASE_URL="mysql://user:pass@host:port/db"
+# ... resto de variables
 ```
-POST   /payment/checkout    # Crear orden de pago
-POST   /payment/webhook     # Webhook de Ualá
-GET    /payment/status/:id  # Estado de pago
-```
 
-## 🗄️ Base de Datos
-
-### Modelos Existentes
-- **User**: Usuarios del sistema
-- **Product**: Catálogo de productos
-
-### Modelos a Implementar
-- **Order**: Órdenes de compra
-- **OrderItem**: Items de cada orden
-- **Cart**: Carrito de compras
-- **CartItem**: Items del carrito
-- **Category**: Categorías de productos
-- **Review**: Reseñas de productos
-
-### Migraciones Pendientes
+### Comandos de Deploy
 ```bash
-npx prisma migrate dev --name add_orders_table
-npx prisma migrate dev --name add_cart_system
-npx prisma migrate dev --name add_categories
+npm run build
+npm run start:prod
 ```
 
-## 🚀 Deployment
+## 🐛 Troubleshooting
 
-### Staging Environment
-- **Platform**: Railway/Vercel/DigitalOcean
-- **Database**: PlanetScale/Railway MySQL
-- **Monitoring**: Uptime monitoring + logs
+### Error de conexión a base de datos
+```bash
+# Verificar que MySQL esté corriendo
+mysql -u root -p
 
-### Production Checklist
-- [ ] Environment variables configuradas
-- [ ] Base de datos con backups automáticos
-- [ ] SSL/HTTPS habilitado
-- [ ] Monitoring y alertas configurados
-- [ ] CI/CD pipeline funcionando
-- [ ] Performance optimizado
-- [ ] Security headers configurados
+# Verificar URL de conexión en .env
+echo $DATABASE_URL
+```
 
-## 🤝 Contribución
+### Puerto ocupado
+```bash
+# Cambiar puerto en .env
+PORT=3001
 
-### Flujo de Desarrollo
-1. Fork del repositorio
-2. Crear branch feature: `git checkout -b feature/nueva-funcionalidad`
-3. Commit con mensaje descriptivo
-4. Push al branch: `git push origin feature/nueva-funcionalidad`
-5. Crear Pull Request
+# O matar proceso en puerto 3000
+npx kill-port 3000
+```
 
-### Estándares de Código
-- **ESLint**: Configuración TypeScript estricta
-- **Prettier**: Formateo automático de código
-- **Conventional Commits**: Formato de commits semántico
-- **Tests**: Obligatorios para nuevas features
+### Errores de migración
+```bash
+# Reset de base de datos (⚠️ borra datos)
+npx prisma migrate reset
 
-## 📞 Contacto & Soporte
+# Generar cliente Prisma
+npx prisma generate
+```
 
-- **Desarrollador**: Alexis Pérez
-- **Email**: [tu-email@example.com]
-- **Issues**: GitHub Issues para reportar bugs
-- **Documentación**: Wiki del repositorio
+## 📝 Licencia
+
+Este proyecto es privado y está destinado para uso interno.
+
+## 👨‍💻 Autor
+
+**Alexis Pérez**  
+GitHub: [@AlexcodePB](https://github.com/AlexcodePB)
 
 ---
 
-### 🏆 Objetivos del Proyecto
+### 🔄 Estado del Proyecto
 
-1. **Corto Plazo** (1 mes): API funcional y estable
-2. **Mediano Plazo** (3 meses): E-commerce completo con features avanzadas
-3. **Largo Plazo** (6 meses): Plataforma escalable con analytics y optimizaciones
+✅ **Funcional** - API lista para desarrollo  
+🚧 **En desarrollo** - Nuevas features en progreso  
 
-**Estado Actual**: 🟡 En desarrollo - Fase 1 pendiente
+**Última actualización**: $(date +%Y-%m-%d)
