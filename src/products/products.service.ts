@@ -3,7 +3,7 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateProductDto } from './DTOs/create-product.dto';
 
 @Injectable()
-export class ProductosService {
+export class ProductsService {
   constructor(private readonly prisma: PrismaService) {}
 
   getAll() {
@@ -18,7 +18,7 @@ export class ProductosService {
     return this.prisma.product.create({ data });
   }
 
-  update(id: string, data: any) {
+  update(id: string, data: Partial<CreateProductDto>) {
     return this.prisma.product.update({ where: { id }, data });
   }
 

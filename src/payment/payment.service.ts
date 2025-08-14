@@ -1,7 +1,11 @@
 import { HttpException, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import axios, { AxiosError } from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import { CreatePaymentDto } from './dto/create-payment.dto';
+import {
+  UalaAuthResponse,
+  UalaOrderResponse,
+} from './interfaces/uala-response.interface';
 
 @Injectable()
 export class PaymentService {
@@ -11,7 +15,7 @@ export class PaymentService {
     const authUrl = this.config.get<string>('UALA_AUTH_URL');
     if (!authUrl) throw new Error('UALA_AUTH_URL no definido');
 
-    const response = await axios.post(
+    const response: AxiosResponse<UalaAuthResponse> = await axios.post(
       authUrl,
       {
         username: this.config.get<string>('USERNAME_UALA'),
@@ -36,7 +40,7 @@ export class PaymentService {
       const createOrderUrl = this.config.get<string>('UALA_ORDER_URL');
       if (!createOrderUrl) throw new Error('UALA_ORDER_URL no definido');
 
-      const response = await axios.post(
+      const response: AxiosResponse<UalaOrderResponse> = await axios.post(
         createOrderUrl,
         {
           amount: dto.amount,
